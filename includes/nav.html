@@ -1,0 +1,24 @@
+{% if currentPage.name == 'home' %}
+<h2 class="sitename">{{SiteName}}</h2>
+{% else %}
+<h2 class="sitename"><a href="/">{{SiteName}}</a></h2>
+{% endif %}
+
+
+<div class="menu">
+  <div class="menu-head">
+    <h3 class="sitename"> {{SiteName}} </h3>
+    <div class="hamburger close">
+      <span class="burger1"></span>
+      <span class="burger2"></span>
+    </div>
+  </div>
+  {% for menuItem in MenuItems %}
+      <a class="menu-item {{menuItem.active}}" href="{{menuItem.link}}" > {{ menuItem.name }} </a>
+  {% endfor %}
+</div>
+<div class="hamburger open">
+  <span class="burger1"></span>
+  <span class="burger2"></span>
+  <span class="burger3"></span>
+</div>

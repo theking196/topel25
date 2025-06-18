@@ -1,0 +1,501 @@
+function _(selector, index) {
+    const elements = document.querySelectorAll(selector);
+
+    // If no index is provided or index is invalid
+    if (index === undefined || isNaN(index) || index < 0 || index >= elements.length) {
+        const methods ={
+            html: function(html) {
+                if (typeof html === 'string') {
+                    elements.forEach(function(element) {
+                        element.innerHTML = html;
+                    });
+                }
+                return elements[0] ? elements[0].innerHTML : null;
+            },
+            text: function(text) {
+                if (typeof text === 'string') {
+                    elements.forEach(function(element) {
+                        element.innerText = text;
+                    });
+                }
+                return elements[0] ? elements[0].innerText : null;
+            },
+            css: function(property, value) {
+                if (typeof property === 'string' && typeof value === 'string') {
+                    elements.forEach(function(element) {
+                        element.style[property] = value;
+                    });
+                }
+                return elements[0] ? elements[0].style[property] : null;
+            },
+            addClass: function(className) {
+                elements.forEach(function(element) {
+                    element.classList.add(className);
+                });
+            },
+            removeClass: function(className) {
+                elements.forEach(function(element) {
+                    element.classList.remove(className);
+                });
+            },
+            toggleClass: function(className) {
+                elements.forEach(function(element) {
+                    element.classList.toggle(className);
+                });
+            },
+            hasClass: function(className) {
+                return elements[0] ? elements[0].classList.contains(className) : false;
+            },
+            attr: function(attribute, value) {
+                if (typeof attribute === 'string') {
+                    if (value === undefined) {
+                        return elements[0] ? elements[0].getAttribute(attribute) : null;
+                    } else {
+                        elements.forEach(function(element) {
+                            element.setAttribute(attribute, value);
+                        });
+                    }
+                }
+            },
+            removeAttr: function(attribute) {
+                if (typeof attribute === 'string') {
+                    elements.forEach(function(element) {
+                        element.removeAttribute(attribute);
+                    });
+                }
+            },
+            data: function(key, value) {
+                if (typeof key === 'string') {
+                    if (value === undefined) {
+                        return elements[0] ? elements[0].dataset[key] : null;
+                    } else {
+                        elements.forEach(function(element) {
+                            element.dataset[key] = value;
+                        });
+                    }
+                }
+            },
+            on: function(eventName, callback) {
+                elements.forEach(function(element) {
+                    element.addEventListener(eventName, callback);
+                });
+            },
+            off: function(eventName, callback) {
+                elements.forEach(function(element) {
+                    element.removeEventListener(eventName, callback);
+                });
+            },
+            slideUp: function(duration,display) {
+
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.height = '0';
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                });
+            },
+            slideDown: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.display = '';
+                    element.style.height = element.scrollHeight + 'px';
+                });
+            },
+            fadeIn: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    element.style.display = "block";
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.opacity = '1';
+                });
+            },
+            fadeOut: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    element.style.display = "block";
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.opacity = '0';
+                });
+            },
+            rotate2D: function(degrees, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'rotate(' + degrees + 'deg)';
+                });
+                
+            },
+            rotate3D: function(degreesX, degreesY, degreesZ, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'rotateX(' + degreesX + 'deg) rotateY(' + degreesY + 'deg) rotateZ(' + degreesZ + 'deg)';
+                });
+            },
+            floatOut: function(direction, distance, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    switch (direction) {
+                        case 'left':
+                            element.style.transform = 'translateX(-' + distance + ')';
+                            break;
+                        case 'right':
+                            element.style.transform = 'translateX(' + distance + ')';
+                            break;
+                        case 'up':
+                            element.style.transform = 'translateY(-' + distance + ')';
+                            break;
+                        case 'down':
+                            element.style.transform = 'translateY(' + distance + ')';
+                            break;
+                        default:
+                            break;
+                    }
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                });
+            },
+            compressIn: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'scale(0)';
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                });
+            },
+            compressOut: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'scale(1)';
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                });
+                
+            },
+            bounce: function(distance, bounces, duration, display) {
+                duration = duration || 400; // Default duration is 400ms
+                distance = distance || '20px'; // Default distance is 20px
+                bounces = bounces || 3; // Default number of bounces is 3
+                elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    let translateY = '';
+                    for (let i = 0; i < bounces; i++) {
+                        translateY += 'translateY(-' + distance + ') ';
+                    }
+                    translateY += 'translateY(0)';
+                    element.style.transform = translateY;
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration * (bounces + 1));
+                    }
+                });
+                return methods;
+            },
+            shake: function(horizontal, vertical, distance, duration, display) {
+                duration = duration || 400; // Default duration is 400ms
+                distance = distance || '10px'; // Default distance is 10px
+                elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    let translate = '';
+                    if (horizontal) {
+                        translate += 'translateX(' + distance + ') ';
+                    }
+                    if (vertical) {
+                        translate += 'translateY(' + distance + ') ';
+                    }
+                    translate += 'translateX(0) translateY(0)';
+                    element.style.transform = translate;
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                });
+                return methods;
+            }
+            
+            
+            
+        };
+        return methods;
+    }
+    // If index is provided and valid
+    else {
+        const element = elements[index];
+        return {
+            html: function(html) {
+                if (typeof html === 'string') {
+                    element.innerHTML = html;
+                }
+                return element.innerHTML;
+            },
+            text: function(text) {
+                if (typeof text === 'string') {
+                    element.innerText = text;
+                }
+                return element.innerText;
+            },
+            css: function(property, value) {
+                if (typeof property === 'string' && typeof value === 'string') {
+                    element.style[property] = value;
+                }
+                return element.style[property];
+            },
+            addClass: function(className) {
+                element.classList.add(className);
+            },
+            removeClass: function(className) {
+                element.classList.remove(className);
+            },
+            toggleClass: function(className) {
+                element.classList.toggle(className);
+            },
+            hasClass: function(className) {
+                return element.classList.contains(className);
+            },
+            attr: function(attribute, value) {
+                if (typeof attribute === 'string') {
+                    if (value === undefined) {
+                        return element.getAttribute(attribute);
+                    } else {
+                        element.setAttribute(attribute, value);
+                    }
+                }
+            },
+            removeAttr: function(attribute) {
+                if (typeof attribute === 'string') {
+                    element.removeAttribute(attribute);
+                }
+            },
+            data: function(key, value) {
+                if (typeof key === 'string') {
+                    if (value === undefined) {
+                        return element.dataset[key];
+                    } else {
+                        element.dataset[key] = value;
+                    }
+                }
+            },
+            on: function(eventName, callback) {
+                element.addEventListener(eventName, callback);
+            },
+            off: function(eventName, callback) {
+                element.removeEventListener(eventName, callback);
+            },
+            slideUp: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.height = '0';
+                    element.style.overflow = 'hidden';
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+            },
+            slideDown: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.display = '';
+                    element.style.height = element.scrollHeight + 'px';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            fadeIn: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.display = "block";
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.opacity = '1';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            fadeOut: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.opacity = '0';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            rotate2D: function(degrees, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'rotate(' + degrees + 'deg)';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            rotate3D: function(degreesX, degreesY, degreesZ, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'rotateX(' + degreesX + 'deg) rotateY(' + degreesY + 'deg) rotateZ(' + degreesZ + 'deg)';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            floatOut: function(direction, distance, duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    switch (direction) {
+                        case 'left':
+                            element.style.transform = 'translateX(-' + distance + ')';
+                            break;
+                        case 'right':
+                            element.style.transform = 'translateX(' + distance + ')';
+                            break;
+                        case 'up':
+                            element.style.transform = 'translateY(-' + distance + ')';
+                            break;
+                        case 'down':
+                            element.style.transform = 'translateY(' + distance + ')';
+                            break;
+                        default:
+                            break;
+                    }
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            compressIn: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'scale(0)';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+            },
+            compressOut: function(duration,display) {
+                duration = duration || 400; // Default duration is 400ms
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    element.style.transform = 'scale(1)';
+                // });
+                if (!display) {
+                    setTimeout(() => {
+                        element.style.display = 'none';
+                    }, duration);
+                }
+
+            },
+            bounce: function(distance, bounces, duration, display) {
+                duration = duration || 400; // Default duration is 400ms
+                distance = distance || '20px'; // Default distance is 20px
+                bounces = bounces || 3; // Default number of bounces is 3
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    let translateY = '';
+                    for (let i = 0; i < bounces; i++) {
+                        translateY += 'translateY(-' + distance + ') ';
+                    }
+                    translateY += 'translateY(0)';
+                    element.style.transform = translateY;
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration * (bounces + 1));
+                    }
+                // });
+            },
+            shake: function(horizontal, vertical, distance, duration, display) {
+                duration = duration || 400; // Default duration is 400ms
+                distance = distance || '10px'; // Default distance is 10px
+                // elements.forEach(function(element) {
+                    element.style.transitionDuration = duration + 'ms';
+                    let translate = '';
+                    if (horizontal) {
+                        translate += 'translateX(' + distance + ') ';
+                    }
+                    if (vertical) {
+                        translate += 'translateY(' + distance + ') ';
+                    }
+                    translate += 'translateX(0) translateY(0)';
+                    element.style.transform = translate;
+                    if (!display) {
+                        setTimeout(() => {
+                            element.style.display = 'none';
+                        }, duration);
+                    }
+                // });
+            }
+        };
+    }
+}

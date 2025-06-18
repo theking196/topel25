@@ -1,0 +1,84 @@
+<script src="placeholder/js/main.js"></script>
+<script src="jquery/script.js"></script>
+
+<div style="display: none;">
+{% extends 'base.html' %}
+{% assign MenuItems.1.active = 'active' %}
+{% assign currentPage = {'name':'about'} %}
+
+{% block title %} About Us {% endblock %}
+{% block main %}
+<link rel="stylesheet" href="css/about.css">
+
+<section class="section about-hero animate-slide-in px-3 py-4">
+  <h1 class="section-title">About the Couple 💖</h1>
+  <p class="section-subtitle">A journey of faith, friendship, and divine connection — rooted in purpose and crowned in joy.</p>
+</section>
+
+<section class="section love-story px-3 py-4">
+  <h2 class="section-title">Their Love Story</h2>
+  <p class="section-content">
+    Papa T and Sister Pelumi met during a workers’ retreat organized by the area headquarters of Papa T’s church, which also happens to oversee Sister Pelumi’s parish. From that divine encounter at camp, a beautiful friendship was born.
+    <br><br>
+    Their paths, both shaped by service and ministry, crossed again and again — until Papa T proposed in January 2025. Their engagement followed on Thursday, June 12, and they were joyfully united in marriage on Saturday, June 14, 2025.
+  </p>
+</section>
+
+<section class="section couple-profile px-3 py-4">
+  <div class="profile-card">
+    <img src="assets/wedding/photos/groom.jpg" alt="Papa T" class="profile-img">
+    <div class="profile-text">
+      <h3>Papa T</h3>
+      <p>
+        Papa T attended Stars Secondary School in Lagos, where he completed his WAEC. He later pursued his university education in the Benin Republic.
+        <br><br>
+        He is a mentor, teacher, and the founding vision bearer of The Kingdom Mandate (TKM) — first launched in 2019 and fully revived in 2020. Known for his wisdom and humility, Papa T continues to lead others into divine purpose.
+      </p>
+    </div>
+  </div>
+
+  <div class="profile-card reverse">
+    <img src="assets/wedding/photos/bride.jpg" alt="The Bride" class="profile-img">
+    <div class="profile-text">
+      <h3>Sister Pelumi</h3>
+      <p>
+        Sister Pelumi studied Physiology at Babcock University and has served faithfully in her church and ministry. Her parish is under the area headquarters where Papa T leads, and their shared commitment to God's work is what brought them together.
+        <br><br>
+        She is known for her grace, wisdom, and joyful heart — a perfect companion to Papa T on this kingdom journey.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section fellowship px-3 py-4">
+  <h2 class="section-title">Rooted in Fellowship</h2>
+  <p class="section-content">
+    TKM — The Kingdom Mandate — was first born in 2019, went through a refining pause, and was relaunched in 2020. It has since grown into a nurturing ground for teenagers and young adults seeking truth, accountability, and direction.
+    <br><br>
+    Their union stands as a living testimony of what God can birth through a community rooted in His presence.
+  </p>
+</section>
+
+<section class="section verse px-3 py-4">
+  <blockquote>
+    <p>"Two are better than one... for if they fall, one will lift up his fellow." – Ecclesiastes 4:9-10</p>
+  </blockquote>
+</section>
+
+<section class="section cta px-3 py-4 text-center">
+  <p>Want to experience more?</p>
+  <div class="quick-links">
+    <a href="gallery.html" class="btn">View Photos</a>
+    <a href="prayers.html" class="btn btn-outline">Prayers For Couple</a>
+    <a href="details.html" class="btn btn-outline">More Details</a>
+  </div>
+  
+</section>
+
+{% endblock %}
+
+</div>
+
+
+
+<script src="js/index.js"></script>

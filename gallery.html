@@ -1,0 +1,74 @@
+<script src="placeholder/js/main.js"></script>
+<script src="jquery/script.js"></script>
+
+<div style="display: none;">
+
+{% extends 'base.html' %}
+{% assign MenuItems.3.active = 'active' %}
+{% assign currentPage = {'name':'gallery'} %}
+
+{% block title %} Gallery {% endblock %}
+
+{% block main %}
+    <link rel="stylesheet" href="css/gallery.css">
+    <div class="container">
+        <div class="header">
+            <h1>Wedding Pics 📷 (➕ Wedding Highlights) </h1>
+        </div>
+
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search photos, videos, tags, names..." id="searchInput">
+            <div class="search-icon">🔍</div>
+        </div>
+
+        <div class="filter-container" id="filterContainer">
+            <!-- Filters will be dynamically loaded here -->
+        </div>
+
+        <!-- Desktop Gallery -->
+        <div class="desktop-gallery" id="desktopGallery"></div>
+        
+        <!-- Pagination for Desktop -->
+        <div class="pagination" id="pagination"></div>
+
+        <!-- Mobile Gallery with Swipe -->
+        <div class="mobile-gallery" id="mobileGallery">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-text" id="progressText">1 of 12</div>
+            
+            <div class="mobile-swipe-container">
+                <div class="mobile-swipe-wrapper" id="mobileSwipeWrapper">
+                    <!-- Items will be dynamically loaded here -->
+                </div>
+                
+                <div class="swipe-indicators" id="swipeIndicators">
+                    <!-- Dots will be dynamically added -->
+                </div>
+                
+                <div class="swipe-hint" id="swipeHint">👉</div>
+                
+                <button class="nav-button prev" id="prevBtn">‹</button>
+                <button class="nav-button next" id="nextBtn">›</button>
+            </div>
+            
+            
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightboxClose">×</button>
+            <div class="lightbox-content" id="lightboxContent"></div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">Loading...</div>
+        <div class="no-results" id="noResults" style="display: none;">
+            No photos or videos found matching your search. 🔍
+        </div>
+    </div>
+    <script src="js/gallery.js"></script>
+    {% endblock %}
+</div>
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topel' 25 - {% block title %} Home {% endblock %}</title>
+    <link rel="stylesheet" href="/bootstrap/style.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="loader" id="pageLoader">
+        <div class="spinner"></div>
+        <div class="loader-text">Topel'25...</div>
+    </div>
+
+    <section class="nav">
+        {% include 'includes/nav.html' %}
+    </section>
+    <section class="main container-fluid mt-2">
+        {% block main %}
+        <h1>Main Section</h1>
+        {% endblock %}
+    </section>
+</body>
+</html>

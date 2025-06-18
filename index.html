@@ -1,0 +1,46 @@
+<script src="placeholder/js/main.js"></script>
+<script src="jquery/script.js"></script>
+
+<div style="display: none;">
+{% assign MenuItems.0.active = 'active' %}
+
+{% assign currentPage = {'name':'home'} %}
+{% extends 'base.html' %}
+
+{% block main %}
+    <section class="welcome-section section animate-slide-in px-3 py-4">
+        <div class="welcome-header">
+            <h1 class="welcome-title">A Joyful Celebration of Love 💍</h1>
+            <p class="welcome-subtitle">
+            Thank you for being part of Papa T’s unforgettable wedding day!
+            </p>
+        </div>
+
+        <div class="featured-box">
+            <img src="assets/wedding/photos/front_cover.jpg" alt="Papa T Wedding Celebration" class="featured-img">
+        </div>
+
+        <div class="quick-links">
+            <a href="gallery.html" class="btn">Photo Memories</a>
+            <a href="prayers.html" class="btn btn-outline">Prayers For Couple</a>
+            <a href="details.html" class="btn btn-outline">More Details</a>
+            <a href="about.html" class="btn btn-outline">About The Couple</a>
+        </div>
+
+        <div class="wedding-info mt-4">
+            <h3 class="info-title">Wedding Recap</h3>
+            <p class="info-text">📍 Held at Living Hope RCCG, Ota-ona, Ikorodu, Lagos State</p>
+            <p class="info-text">📅 Happened on June 14, 2025 | ⏰ 10:00 AM WAT</p>
+            <!-- <p class="info-text">🎥 View the live recording or explore the memories below.</p> -->
+        </div>
+    </section>
+
+{% endblock %}
+</div>
+
+
+
+<script src="js/index.js"></script>
+<script>
+    data.currentPage = data.MenuItems[0];
+</script>
