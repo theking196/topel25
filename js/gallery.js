@@ -875,7 +875,7 @@
 
                     let mediaElement = '';
                     if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || ''}" preload="none">
+                        mediaElement = `<video poster="${item.poster || '/assets/video.png'}" preload="none">
                                          <source src="${item.src}" type="video/mp4">
                                        </video>`;
                     } else {
@@ -911,7 +911,7 @@
 
                     let mediaElement = '';
                     if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || ''}" preload="none">
+                        mediaElement = `<video poster="${item.poster || '/assets/video.png'}" preload="none">
                                          <source src="${item.src}" type="video/mp4">
                                        </video>`;
                     } else {
