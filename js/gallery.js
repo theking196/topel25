@@ -656,12 +656,11 @@ class ModernGallery {
             }
 
             // Hide loading animation and show media
-            if (loadingSpinner) {
-                loadingSpinner.style.display = 'none';
-            }
-            
-            mediaElement.style.opacity = '0';
-            mediaElement.style.display = 'block';
+                if (loadingSpinner) {
+                    loadingSpinner.remove();
+                }
+                mediaElement.style.opacity = '0';
+                mediaElement.style.display = 'block';
             
             // Fade in animation
             requestAnimationFrame(() => {
