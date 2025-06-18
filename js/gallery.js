@@ -875,7 +875,7 @@
 
                     let mediaElement = '';
                     if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || ''}" preload="metadata">
+                        mediaElement = `<video poster="${item.poster || ''}" preload="none">
                                          <source src="${item.src}" type="video/mp4">
                                        </video>`;
                     } else {
@@ -911,7 +911,7 @@
 
                     let mediaElement = '';
                     if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || ''}" preload="metadata">
+                        mediaElement = `<video poster="${item.poster || ''}" preload="none">
                                          <source src="${item.src}" type="video/mp4">
                                        </video>`;
                     } else {
@@ -1096,7 +1096,7 @@
 
                 let mediaElement = '';
                 if (item.type === 'video') {
-                    mediaElement = `<video controls autoplay>
+                    mediaElement = `<video controls autoplay preload="auto">
                                      <source src="${item.src}" type="video/mp4">
                                    </video>`;
                 } else {
