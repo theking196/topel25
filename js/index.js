@@ -1,11 +1,11 @@
 var data = {
         SiteName: "TOPEL' 25",
         MenuItems: [
-                { name: 'Home', link:"/index.html",active:""},
-                { name: 'About', link:"/about.html",active:""},
-                { name: 'details', link:"/details.html",active:""},
-                { name: 'gallery', link:"/gallery.html",active:""},
-                { name: 'Prayers For The Couple', link:"/prayers.html",active:""},
+                { name: 'Home', link:"index.html",active:""},
+                { name: 'About', link:"about.html",active:""},
+                { name: 'details', link:"details.html",active:""},
+                { name: 'gallery', link:"gallery.html",active:""},
+                { name: 'Prayers For The Couple', link:"prayers.html",active:""},
             ],
     };
         
