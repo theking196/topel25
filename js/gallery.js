@@ -13,7 +13,7 @@
                 id: 2,
                 type: 'video',
                 src: 'assets/wedding/videos/vid002.mp4',
-                // poster: 'assets/wedding/photos/passport.jpg',
+                // poster: 'assets/wedding/photo/passport.jpg',
                 title: 'Pre Vow',
                 tags: ['ceremony', 'Vow', 'highlights', 'short video'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses','Pst........'],
@@ -31,7 +31,7 @@
             {
                 id: 4,
                 type: 'image',
-                src: 'assets/wedding/photos/001.jpg',
+                src: 'assets/wedding/photo/001.jpg',
                 title: 'Couples In Black and White',
                 tags: ['smile', 'black and white', 'the couples'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -40,7 +40,7 @@
             {
                 id: 5,
                 type: 'image',
-                src: 'assets/wedding/photos/002.jpg',
+                src: 'assets/wedding/photo/002.jpg',
                 title: 'Couple Studio',
                 tags: ['Peter\'s studio', 'studio', 'casual', 'the couples'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -49,7 +49,7 @@
             {
                 id: 6,
                 type: 'image',
-                src: 'assets/wedding/photos/003.jpg',
+                src: 'assets/wedding/photo/003.jpg',
                 title: 'Wedding Poster',
                 tags: ['art', 'poster', 'graphics', 'verses', 'the couples'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -58,7 +58,7 @@
             {
                 id: 7,
                 type: 'image',
-                src: 'assets/wedding/photos/004.jpg',
+                src: 'assets/wedding/photo/004.jpg',
                 title: 'Latest Couples In Town.',
                 tags: ['ceremony', 'the couples',  'highlights'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -67,7 +67,7 @@
             {
                 id: 8,
                 type: 'image',
-                src: 'assets/wedding/photos/005.jpg',
+                src: 'assets/wedding/photo/005.jpg',
                 title: 'Groom\'s sister',
                 tags: ['family', 'groom', 'groom sister', 'single'],
                 names: ['Testimony'],
@@ -76,7 +76,7 @@
             {
                 id: 9,
                 type: 'image',
-                src: 'assets/wedding/photos/006.jpg',
+                src: 'assets/wedding/photo/006.jpg',
                 title: 'TKM Group',
                 tags: ['reception', 'TKM', 'highlights', 'Group'],
                 names: ['TKMites'],
@@ -85,7 +85,7 @@
             {
                 id: 10,
                 type: 'image',
-                src: 'assets/wedding/photos/007.jpg',
+                src: 'assets/wedding/photo/007.jpg',
                 title: 'Studio Photo\'s ',
                 tags: ['studio', 'the couples', 'the couples'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -94,7 +94,7 @@
             {
                 id: 11,
                 type: 'image',
-                src: 'assets/wedding/photos/008.jpg',
+                src: 'assets/wedding/photo/008.jpg',
                 title: 'Studio Photo\'s II',
                 tags: ['studio', 'the couples'],
                 names: ['Papa T', 'the couples', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -112,7 +112,7 @@
             {
                 id: 13,
                 type: 'image',
-                src: 'assets/wedding/photos/009.jpg',
+                src: 'assets/wedding/photo/009.jpg',
                 title: 'TKM Group II',
                 tags: ['ceremony', 'TKM', 'highlights', 'Group'],
                 names: ['TKMites'],
@@ -121,7 +121,7 @@
             {
                 id: 14,
                 type: 'image',
-                src: 'assets/wedding/photos/010.jpg',
+                src: 'assets/wedding/photo/010.jpg',
                 title: 'Smiles 😊',
                 tags: ['friend','TKM','smile', 'single'],
                 names: ['Laanu'],
@@ -130,7 +130,7 @@
             {
                 id: 15,
                 type: 'image',
-                src: 'assets/wedding/photos/011.jpg',
+                src: 'assets/wedding/photo/011.jpg',
                 title: '______',
                 tags: ['the couples','ceremony','highlights'],
                 names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
@@ -148,7 +148,7 @@
             {
                 id: 17,
                 type: 'image',
-                src: 'assets/wedding/photos/012.jpg',
+                src: 'assets/wedding/photo/012.jpg',
                 title: 'Papa T Vibes',
                 tags: ['groom','engagement','highlights', 'single'],
                 names: ['Papa T', 'Mr. Oluwatosin Moses'],
@@ -157,7 +157,7 @@
             {
                 id: 18,
                 type: 'image',
-                src: 'assets/wedding/photos/013.jpg',
+                src: 'assets/wedding/photo/013.jpg',
                 title: 'Papa T Vibes II',
                 tags: ['groom','engagement','highlights', 'single'],
                 names: ['Papa T', 'Mr. Oluwatosin Moses'],
@@ -175,7 +175,7 @@
             {
                 id: 20,
                 type: 'image',
-                src: 'assets/wedding/photos/014.jpg',
+                src: 'assets/wedding/photo/014.jpg',
                 title: 'Papa T & his Sister',
                 tags: ['groom','groom sister','engagement','highlights'],
                 names: ['Papa T', 'Mr. Oluwatosin Moses', 'Testimony'],
@@ -211,7 +211,7 @@
             {
                 id: 24,
                 type: 'image',
-                src: 'assets/wedding/photos/015.jpg',
+                src: 'assets/wedding/photo/015.jpg',
                 title: 'Toluwani',
                 tags: ['engagement','highlights', 'single'],
                 names: ['Toluwani'],
@@ -220,7 +220,7 @@
             {
                 id: 25,
                 type: 'image',
-                src: 'assets/wedding/photos/016.jpg',
+                src: 'assets/wedding/photo/016.jpg',
                 title: 'TKM Group III',
                 tags: ['ceremony', 'TKM', 'highlights', 'Group'],
                 names: ['TKMites'],
@@ -229,7 +229,7 @@
             {
                 id: 26,
                 type: 'image',
-                src: 'assets/wedding/photos/017.jpg',
+                src: 'assets/wedding/photo/017.jpg',
                 title: 'Opemipo',
                 tags: ['reception','highlights', 'single', 'smile'],
                 names: ['Ope'],
@@ -238,7 +238,7 @@
             {
                 id: 27,
                 type: 'image',
-                src: 'assets/wedding/photos/018.jpg',
+                src: 'assets/wedding/photo/018.jpg',
                 title: 'TKM Group IV',
                 tags: ['ceremony', 'TKM', 'highlights', 'Group'],
                 names: ['TKMites'],
@@ -247,7 +247,7 @@
             {
                 id: 28,
                 type: 'image',
-                src: 'assets/wedding/photos/019.jpg',
+                src: 'assets/wedding/photo/019.jpg',
                 title: 'Ope & Ini ',
                 tags: ['ceremony', 'highlights', 'friends'],
                 names: ['Opemipo','Inioluwa'],
@@ -256,7 +256,7 @@
             {
                 id: 29,
                 type: 'image',
-                src: 'assets/wedding/photos/020.jpg',
+                src: 'assets/wedding/photo/020.jpg',
                 title: 'Ope, Ini, _____, _____& _____',
                 tags: ['ceremony', 'highlights', 'friends','Group'],
                 names: ['Opemipo','Inioluwa','_____','_____','_____'],
@@ -265,7 +265,7 @@
             {
                 id: 30,
                 type: 'image',
-                src: 'assets/wedding/photos/021.jpg',
+                src: 'assets/wedding/photo/021.jpg',
                 title: 'Tolu & Christiana ',
                 tags: ['engagement', 'highlights', 'friends'],
                 names: ['Toluwani','Christiana'],
@@ -274,7 +274,7 @@
             {
                 id: 31,
                 type: 'image',
-                src: 'assets/wedding/photos/022.jpg',
+                src: 'assets/wedding/photo/022.jpg',
                 title: 'Chobukem, Ope, Christiana & Toluwani',
                 tags: ['engagement', 'highlights', 'friends','Group'],
                 names: ['Chibukem','Opemipo','Christiana','Toluwani'],
@@ -283,7 +283,7 @@
             {
                 id: 32,
                 type: 'image',
-                src: 'assets/wedding/photos/024.jpg',
+                src: 'assets/wedding/photo/024.jpg',
                 title: 'Christiana & Pelumi',
                 tags: ['engagement', 'highlights', 'friends'],
                 names: ['Christiana','Pelumi'],
@@ -292,7 +292,7 @@
             {
                 id: 33,
                 type: 'image',
-                src: 'assets/wedding/photos/025.jpg',
+                src: 'assets/wedding/photo/025.jpg',
                 title: 'Oba',
                 tags: ['reception', 'highlights','single'],
                 names: ['Oba'],
@@ -301,7 +301,7 @@
             {
                 id: 34,
                 type: 'image',
-                src: 'assets/wedding/photos/026.jpg',
+                src: 'assets/wedding/photo/026.jpg',
                 title: 'Chibukem',
                 tags: ['reception', 'highlights','single'],
                 names: ['Chibukem'],
@@ -310,7 +310,7 @@
             {
                 id: 35,
                 type: 'image',
-                src: 'assets/wedding/photos/027.jpg',
+                src: 'assets/wedding/photo/027.jpg',
                 title: 'Toluwani & Chibukem',
                 tags: ['engagement', 'highlights', 'friends'],
                 names: ['Toluwani','Chibukem'],
@@ -319,7 +319,7 @@
             {
                 id: 36,
                 type: 'image',
-                src: 'assets/wedding/photos/028.jpg',
+                src: 'assets/wedding/photo/028.jpg',
                 title: 'Christiana & Toluwani',
                 tags: ['engagement', 'highlights', 'friends'],
                 names: ['Christiana','Toluwani'],
@@ -328,7 +328,7 @@
             {
                 id: 37,
                 type: 'image',
-                src: 'assets/wedding/photos/029.jpg',
+                src: 'assets/wedding/photo/029.jpg',
                 title: 'Testimony & Chibukem',
                 tags: ['engagement', 'groom sister', 'highlights', 'friends'],
                 names: ['Testimony','Chibukem'],
@@ -337,7 +337,7 @@
             {
                 id: 37,
                 type: 'image',
-                src: 'assets/wedding/photos/030.jpg',
+                src: 'assets/wedding/photo/030.jpg',
                 title: 'Chibukem, Christiana & Toluwani',
                 tags: ['engagement', 'highlights', 'friends'],
                 names: ['Chibukem','Christiana','Toluwani'],
@@ -346,7 +346,7 @@
             {
                 id: 37,
                 type: 'image',
-                src: 'assets/wedding/photos/031.jpg',
+                src: 'assets/wedding/photo/031.jpg',
                 title: 'Christiana, Pelumi, Ope, Toluwani, Testimony, Chibukem',
                 tags: ['engagement', 'highlights', 'friends', 'groom sister'],
                 names: ['Christiana','Pelumi','Opemipo','Toluwani','Testimony','Chibukem'],
@@ -355,7 +355,7 @@
             {
                 id: 38,
                 type: 'image',
-                src: 'assets/wedding/photos/032.jpg',
+                src: 'assets/wedding/photo/032.jpg',
                 title: 'Testimony, Christiana, Ope, Pelumi, Papa T, Toluwani,  ________, ________',
                 tags: ['engagement', 'highlights', 'groom sister', 'groom'],
                 names: ['Testimony','Christiana','Opemipo','Pelumi','Papa T','Toluwani','______','______'],
@@ -364,7 +364,7 @@
             {
                 id: 39,
                 type: 'image',
-                src: 'assets/wedding/photos/033.jpg',
+                src: 'assets/wedding/photo/033.jpg',
                 title: 'TKM Group V',
                 tags: ['reception', 'TKM', 'highlights', 'Group'],
                 names: ['TKMites'],
@@ -373,7 +373,7 @@
             {
                 id: 40,
                 type: 'image',
-                src: 'assets/wedding/photos/034.jpg',
+                src: 'assets/wedding/photo/034.jpg',
                 title: 'Tolwani, Testimony & Chibukem',
                 tags: ['engagement', 'groom sister', 'highlights', 'friends'],
                 names: ['Tolwani','Testimony','Chibukem'],
@@ -382,7 +382,7 @@
             {
                 id: 41,
                 type: 'image',
-                src: 'assets/wedding/photos/035.jpg',
+                src: 'assets/wedding/photo/035.jpg',
                 title: 'Testimony & Toluwani',
                 tags: ['engagement', 'groom sister', 'highlights', 'friends'],
                 names: ['Testimony','Tolwani'],
@@ -391,7 +391,7 @@
             {
                 id: 42,
                 type: 'image',
-                src: 'assets/wedding/photos/036.jpg',
+                src: 'assets/wedding/photo/036.jpg',
                 title: 'Toluwani & Papa T',
                 tags: ['groom','engagement','highlights'],
                 names: ['Tolwani','Papa T', 'Mr. Oluwatosin Moses'],
@@ -400,7 +400,7 @@
             {
                 id: 43,
                 type: 'image',
-                src: 'assets/wedding/photos/037.jpg',
+                src: 'assets/wedding/photo/037.jpg',
                 title: 'Papa T & _____',
                 tags: ['groom','engagement','highlights'],
                 names: ['Papa T', 'Mr. Oluwatosin Moses','_____'],
@@ -409,7 +409,7 @@
             {
                 id: 44,
                 type: 'image',
-                src: 'assets/wedding/photos/038.jpg',
+                src: 'assets/wedding/photo/038.jpg',
                 title: 'Christiana & Papa T',
                 tags: ['groom','engagement','highlights'],
                 names: ['Chriatiana','Papa T', 'Mr. Oluwatosin Moses'],
@@ -418,7 +418,7 @@
             {
                 id: 45,
                 type: 'image',
-                src: 'assets/wedding/photos/039.jpg',
+                src: 'assets/wedding/photo/039.jpg',
                 title: 'Chibukem & Papa T',
                 tags: ['groom','engagement','highlights'],
                 names: ['Chibukem','Papa T', 'Mr. Oluwatosin Moses'],
@@ -427,7 +427,7 @@
             {
                 id: 46,
                 type: 'image',
-                src: 'assets/wedding/photos/040.jpg',
+                src: 'assets/wedding/photo/040.jpg',
                 title: 'Toluwani & Papa T II',
                 tags: ['groom','engagement','highlights'],
                 names: ['Tolwani','Papa T', 'Mr. Oluwatosin Moses'],
@@ -436,7 +436,7 @@
             {
                 id: 47,
                 type: 'image',
-                src: 'assets/wedding/photos/041.jpg',
+                src: 'assets/wedding/photo/041.jpg',
                 title: 'Tolu & Christiana II',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['Tolwani','Christiana'],
@@ -445,7 +445,7 @@
             {
                 id: 48,
                 type: 'image',
-                src: 'assets/wedding/photos/042.jpg',
+                src: 'assets/wedding/photo/042.jpg',
                 title: 'Christiana & Pelumi',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['Christiana','Pelumi'],
@@ -454,7 +454,7 @@
             {
                 id: 49,
                 type: 'image',
-                src: 'assets/wedding/photos/043.jpg',
+                src: 'assets/wedding/photo/043.jpg',
                 title: 'Chibukem & Christiana',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['Chibukem','Christiana'],
@@ -463,7 +463,7 @@
             {
                 id: 50,
                 type: 'image',
-                src: 'assets/wedding/photos/044.jpg',
+                src: 'assets/wedding/photo/044.jpg',
                 title: '_____ & Christiana',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['_____','Christiana'],
@@ -472,7 +472,7 @@
             {
                 id: 51,
                 type: 'image',
-                src: 'assets/wedding/photos/045.jpg',
+                src: 'assets/wedding/photo/045.jpg',
                 title: '_____',
                 tags: ['engagement','highlights', 'single'],
                 names: ['_____'],
@@ -481,7 +481,7 @@
             {
                 id: 52,
                 type: 'image',
-                src: 'assets/wedding/photos/046.jpg',
+                src: 'assets/wedding/photo/046.jpg',
                 title: 'Ope & Pelumi',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['Opemipo','Pelumi'],
@@ -490,7 +490,7 @@
             {
                 id: 53,
                 type: 'image',
-                src: 'assets/wedding/photos/047.jpg',
+                src: 'assets/wedding/photo/047.jpg',
                 title: 'Testimony & Progress',
                 tags: ['engagement','highlights', 'friends'],
                 names: ['Testimony','Progress'],
@@ -499,7 +499,7 @@
             {
                 id: 54,
                 type: 'image',
-                src: 'assets/wedding/photos/048.jpg',
+                src: 'assets/wedding/photo/048.jpg',
                 title: '_____, Bukunmi, Toluwani, _____',
                 tags: ['reception','highlights','friends'],
                 names: ['_____','Bukunmi','Toluwani','_____'],
@@ -508,7 +508,7 @@
             {
                 id: 54,
                 type: 'image',
-                src: 'assets/wedding/photos/049.jpg',
+                src: 'assets/wedding/photo/049.jpg',
                 title: 'Toluwani, Groom\'s Mother, Pelumi',
                 tags: ['reception','highlights'],
                 names: ['Toluwani','Groom\'s Mother','Pelumi'],
@@ -518,7 +518,7 @@
                 id: 55,
                 type: 'video',
                 src: 'assets/wedding/videos/vid010.mp4',
-                // poster: 'assets/wedding/photos/passport.jpg',
+                // poster: 'assets/wedding/photo/passport.jpg',
                 title: 'TKM Group VI',
                 tags: ['reception', 'highlights', 'short video'],
                 names: ['TKMites'],
@@ -528,7 +528,7 @@
                 id: 56,
                 type: 'video',
                 src: 'assets/wedding/videos/vid011.mp4',
-                // poster: 'assets/wedding/photos/passport.jpg',
+                // poster: 'assets/wedding/photo/passport.jpg',
                 title: 'TKM Group VII',
                 tags: ['reception', 'highlights', 'short video'],
                 names: ['TKMites'],
@@ -537,7 +537,7 @@
             {
                 id: 57,
                 type: 'image',
-                src: 'assets/wedding/photos/050.jpg',
+                src: 'assets/wedding/photo/050.jpg',
                 title: 'Freedom, Laanu',
                 tags: ['reception','highlights', 'friends'],
                 names: ['Freedom','Laanu'],
@@ -546,7 +546,7 @@
             {
                 id: 58,
                 type: 'image',
-                src: 'assets/wedding/photos/051.jpg',
+                src: 'assets/wedding/photo/051.jpg',
                 title: '_____, Laanu, _____',
                 tags: ['reception','highlights', 'friends'],
                 names: ['_____','Laanu','_____'],
@@ -555,7 +555,7 @@
             {
                 id: 59,
                 type: 'image',
-                src: 'assets/wedding/photos/052.jpg',
+                src: 'assets/wedding/photo/052.jpg',
                 title: '_____, Ini',
                 tags: ['reception','highlights', 'friends'],
                 names: ['_____','Inioluwa'],
@@ -564,7 +564,7 @@
             {
                 id: 60,
                 type: 'image',
-                src: 'assets/wedding/photos/053.jpg',
+                src: 'assets/wedding/photo/053.jpg',
                 title: '_____, _____',
                 tags: ['reception','highlights', 'friends'],
                 names: ['_____','_____'],
