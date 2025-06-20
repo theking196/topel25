@@ -257,9 +257,9 @@
                 id: 29,
                 type: 'image',
                 src: 'assets/wedding/photo/020.jpg',
-                title: 'Ope, Ini, _____, _____& _____',
+                title: 'Grace, Ope, Ini  Nifemi & Opeoluwa',
                 tags: ['ceremony', 'highlights', 'friends','Group'],
-                names: ['Opemipo','Inioluwa','_____','_____','_____'],
+                names: ['Grace','Opemipo','Inioluwa','Nifemi','Opeoluwa'],
                 category: 'friends'
             },
             {
@@ -356,9 +356,9 @@
                 id: 38,
                 type: 'image',
                 src: 'assets/wedding/photo/032.jpg',
-                title: 'Testimony, Christiana, Ope, Pelumi, Papa T, Toluwani,  ________, ________',
+                title: 'Testimony, Christiana, Ope, Pelumi, Papa T, Toluwani,  Mosimiloluwa , Sister Jasperella',
                 tags: ['engagement', 'highlights', 'groom sister', 'groom'],
-                names: ['Testimony','Christiana','Opemipo','Pelumi','Papa T','Toluwani','______','______'],
+                names: ['Testimony','Christiana','Opemipo','Pelumi','Papa T','Toluwani','Mosimiloluwa','Sister Jasperella'],
                 category: 'engagement'
             },
             {
@@ -401,9 +401,9 @@
                 id: 43,
                 type: 'image',
                 src: 'assets/wedding/photo/037.jpg',
-                title: 'Papa T & _____',
+                title: 'Papa T & Sister Jasperella',
                 tags: ['groom','engagement','highlights'],
-                names: ['Papa T', 'Mr. Oluwatosin Moses','_____'],
+                names: ['Papa T', 'Mr. Oluwatosin Moses','Sister Jasperella'],
                 category: 'engagement'
             },
             {
@@ -464,18 +464,18 @@
                 id: 50,
                 type: 'image',
                 src: 'assets/wedding/photo/044.jpg',
-                title: '_____ & Christiana',
+                title: 'Sister Jasperella & Christiana',
                 tags: ['engagement','highlights', 'friends'],
-                names: ['_____','Christiana'],
+                names: ['Sister Jasperella','Christiana'],
                 category: 'engagement'
             },
             {
                 id: 51,
                 type: 'image',
                 src: 'assets/wedding/photo/045.jpg',
-                title: '_____',
+                title: 'Sister Jasperella',
                 tags: ['engagement','highlights', 'single'],
-                names: ['_____'],
+                names: ['Sister Jasperella'],
                 category: 'engagement'
             },
             {
@@ -500,9 +500,9 @@
                 id: 54,
                 type: 'image',
                 src: 'assets/wedding/photo/048.jpg',
-                title: '_____, Bukunmi, Toluwani, _____',
+                title: '_____, Beekay, Toluwani, Beejay',
                 tags: ['reception','highlights','friends'],
-                names: ['_____','Bukunmi','Toluwani','_____'],
+                names: ['_____','Bukunmi','Toluwani','Beejay'],
                 category: 'reception'
             },
             {
@@ -548,27 +548,27 @@
                 id: 58,
                 type: 'image',
                 src: 'assets/wedding/photo/051.jpg',
-                title: '_____, Laanu, _____',
+                title: 'Peace, Laanu, Success',
                 tags: ['reception','highlights', 'friends'],
-                names: ['_____','Laanu','_____'],
+                names: ['Peace','Laanu','Success'],
                 category: 'reception'
             },
             {
                 id: 59,
                 type: 'image',
                 src: 'assets/wedding/photo/052.jpg',
-                title: '_____, Ini',
+                title: 'Esther, Ini',
                 tags: ['reception','highlights', 'friends'],
-                names: ['_____','Inioluwa'],
+                names: ['Esther','Inioluwa'],
                 category: 'reception'
             },
             {
                 id: 60,
                 type: 'image',
                 src: 'assets/wedding/photo/053.jpg',
-                title: '_____, _____',
+                title: 'Grace, Esther',
                 tags: ['reception','highlights', 'friends'],
-                names: ['_____','_____'],
+                names: ['Grace','Esther'],
                 category: 'reception'
             },
                 {
