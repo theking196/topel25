@@ -1,13 +1,9 @@
     const videos = [
-      { title: "Prayer for Unity", file: "assets/prayers/001.mp4" },
-      { title: "Forgiveness in Marriage", file: "videos/forgiveness.mp4" },
-      { title: "Love Rekindled", file: "videos/love.mp4" },
-      { title: "Overcoming Trials", file: "videos/trials.mp4" },
-      { title: "Faithful Love", file: "videos/faithful.mp4" },
-      { title: "Healing & Peace", file: "videos/healing.mp4" },
-      { title: "Joy in Hard Times", file: "videos/joy.mp4" },
-      { title: "Reconciliation Power", file: "videos/reconcile.mp4" },
-      { title: "Spiritual Covering", file: "videos/covering.mp4" },
+      { title: "Caption 1", file: "assets/prayers/001.mp4" },
+      { title: "Caption 2", file: "assets/prayers/002.mp4" },
+      { title: "Caption 3", file: "assets/prayers/003.mp4" },
+      { title: "Caption 4", file: "assets/prayers/004.mp4" },
+      { title: "Caption 5", file: "assets/prayers/005.mp4" },
     ];
 
     let filteredVideos = [...videos];
