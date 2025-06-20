@@ -543,6 +543,7 @@
                 names: ['Freedom','Laanu'],
                 category: 'reception'
             },
+                
             {
                 id: 58,
                 type: 'image',
@@ -568,6 +569,15 @@
                 title: '_____, _____',
                 tags: ['reception','highlights', 'friends'],
                 names: ['_____','_____'],
+                category: 'reception'
+            },
+                {
+                id: 61,
+                type: 'video',
+                src: 'assets/wedding/videos/vid012.mp4',
+                title: 'Tkmites that attended the wedding',
+                tags: ['reception', 'TKM', 'highlights', 'Group', 'short video'],
+                names: ['TKMites'],
                 category: 'reception'
             },
         ];
