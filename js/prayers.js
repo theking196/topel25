@@ -1,5 +1,5 @@
     const videos = [
-      { title: "Prayer for Unity", file: "videos/unity.mp4" },
+      { title: "Prayer for Unity", file: "assets/prayers/001.mp4" },
       { title: "Forgiveness in Marriage", file: "videos/forgiveness.mp4" },
       { title: "Love Rekindled", file: "videos/love.mp4" },
       { title: "Overcoming Trials", file: "videos/trials.mp4" },
