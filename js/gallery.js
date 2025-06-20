@@ -128,15 +128,6 @@
                 category: 'family & friends'
             },
             {
-                id: 15,
-                type: 'image',
-                src: 'assets/wedding/photo/011.jpg',
-                title: '______',
-                tags: ['the couples','ceremony','highlights'],
-                names: ['Papa T', 'Mrs. Pelumi Moses', 'Mr. Oluwatosin Moses'],
-                category: 'ceremony'
-            },
-            {
                 id: 16,
                 type: 'video',
                 src: 'assets/wedding/videos/vid005.mp4',
@@ -500,9 +491,9 @@
                 id: 54,
                 type: 'image',
                 src: 'assets/wedding/photo/048.jpg',
-                title: '_____, Beekay, Toluwani, Beejay',
+                title: 'Testimony, Beekay, Toluwani, Beejay',
                 tags: ['reception','highlights','friends'],
-                names: ['_____','Bukunmi','Toluwani','Beejay'],
+                names: ['Testimony','Bukunmi','Toluwani','Beejay'],
                 category: 'reception'
             },
             {
