@@ -106,7 +106,7 @@ function setUpMobileInfiniteScroll() {
     div.className = "cursor-pointer bg-white shadow rounded overflow-hidden";
     div.innerHTML = `
       <div class="prayer-loader"><div class="prayer-spinner"></div></div>
-      <video class="w-full h-32 object-cover" style="display:none;">
+      <video poster="assets/video.png" preload="none" class="w-full h-32 object-cover" style="display:none;">
         <source src="${vid.file}" type="video/mp4">
       </video>
       <p class="text-sm p-2">${vid.title}</p>
