@@ -589,6 +589,8 @@
                 this.threshold = 100;
                 this.swipeWrapper = null;
                 this.hasInteracted = false;
+                this.mobileBatchSize = 3;
+                this.loadedMobileCount = 0;
                 
                 this.init();
             }
@@ -783,14 +785,21 @@
             }
 
             goToNext() {
-                if (this.currentMobileIndex < this.filteredData.length - 1) {
-                    this.currentMobileIndex++;
-                    this.updateMobilePosition();
-                    this.updateProgressBar();
-                    this.updateNavigationButtons();
-                    this.updateSwipeIndicators();
+                    if (this.currentMobileIndex < this.filteredData.length - 1) {
+                        this.currentMobileIndex++;
+                        // If the user has swiped to the last loaded item, load the next batch
+                        if (
+                            this.currentMobileIndex === this.loadedMobileCount - 1 &&
+                            this.loadedMobileCount < this.filteredData.length
+                        ) {
+                            this.loadMoreMobileItems();
+                        }
+                        this.updateMobilePosition();
+                        this.updateProgressBar();
+                        this.updateNavigationButtons();
+                        this.updateSwipeIndicators();
+                    }
                 }
-            }
 
             updateMobilePosition() {
                 const translateX = -(this.currentMobileIndex * 100);
@@ -899,52 +908,70 @@
                 this.renderPagination();
             }
 
-            setupMobileGallery() {
-                const mobileWrapper = document.getElementById('mobileSwipeWrapper');
-                if (!mobileWrapper) return;
-
-                mobileWrapper.innerHTML = '';
-
-                this.filteredData.forEach(item => {
-                    const mobileItem = document.createElement('div');
-                    mobileItem.className = 'mobile-item';
-
-                    let mediaElement = '';
-                    if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || 'assets/video.png'}" preload="none">
-                                         <source src="${item.src}" type="video/mp4">
-                                       </video>`;
-                    } else {
-                        mediaElement = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
-                    }
-
-                    mobileItem.innerHTML = `
-                        ${mediaElement}
-                        <div class="mobile-overlay">
-                            <div class="item-title">${item.title}</div>
-                            <div class="item-tags">
-                                ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                            </div>
-                            <div class="item-names">${item.names.join(', ')}</div>
+        loadMoreMobileItems() {
+            if (!this.swipeWrapper) return;
+            // Determine how many more items to load
+            const batchSize = this.mobileBatchSize || 3;
+            const start = this.loadedMobileCount || 0;
+            const end = Math.min(start + batchSize, this.filteredData.length);
+        
+            for (let i = start; i < end; i++) {
+                const item = this.filteredData[i];
+                const mobileItem = document.createElement('div');
+                mobileItem.className = 'mobile-item';
+        
+                let mediaElement = '';
+                if (item.type === 'video') {
+                    mediaElement = `<video poster="${item.poster || 'assets/video.png'}" preload="none">
+                                        <source src="${item.src}" type="video/mp4">
+                                    </video>`;
+                } else {
+                    mediaElement = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
+                }
+        
+                mobileItem.innerHTML = `
+                    ${mediaElement}
+                    <div class="mobile-overlay">
+                        <div class="item-title">${item.title}</div>
+                        <div class="item-tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
-                    `;
-
-                    // Add click handler for lightbox
-                    const mediaEl = mobileItem.querySelector('img, video');
-                    if (mediaEl) {
-                        mobileItem.addEventListener('click', () => this.openLightbox(item));
-                        
-                    }
-
-                    mobileWrapper.appendChild(mobileItem);
-                });
-
-                this.updateMobilePosition();
-                this.updateProgressBar();
-                this.updateNavigationButtons();
-                this.setupSwipeIndicators();
-                this.resetSwipeHint();
+                        <div class="item-names">${item.names.join(', ')}</div>
+                    </div>
+                `;
+        
+                // Lightbox handler
+                const mediaEl = mobileItem.querySelector('img, video');
+                if (mediaEl) {
+                    mobileItem.addEventListener('click', () => this.openLightbox(item));
+                }
+        
+                this.swipeWrapper.appendChild(mobileItem);
             }
+        
+            // Update the count of loaded items
+            this.loadedMobileCount = end;
+        }
+
+            setupMobileGallery() {
+                    this.swipeWrapper = document.getElementById('mobileSwipeWrapper');
+                    if (!this.swipeWrapper) return;
+                
+                    // Reset
+                    this.swipeWrapper.innerHTML = '';
+                    this.currentMobileIndex = 0;
+                    this.loadedMobileCount = 0;
+                    this.mobileBatchSize = 3; // How many to load per batch
+                
+                    // Load the first batch of items
+                    this.loadMoreMobileItems();
+                
+                    this.updateMobilePosition();
+                    this.updateProgressBar();
+                    this.updateNavigationButtons();
+                    this.setupSwipeIndicators();
+                    this.resetSwipeHint();
+        }
 
             setupSwipeIndicators() {
                 const indicatorsContainer = document.getElementById('swipeIndicators');
