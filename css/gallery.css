@@ -433,7 +433,7 @@
             color: #333;
         }
 
-        .loading {
+        .loading:not(.gallery-item) {
             text-align: center;
             color: white;
             font-size: 18px;
