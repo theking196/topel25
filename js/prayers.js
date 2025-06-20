@@ -34,8 +34,8 @@
     slide.className = "snap-slide";
     slide.innerHTML = `
       <h2 class="text-xl font-semibold mb-4 text-center">${vid.title}</h2>
-      <div class="prayer-loader"><div class="prayer-spinner"></div></div>
-      <video controls class="w-full h-[70vh] object-contain rounded-lg shadow" style="display:none;">
+      
+      <video controls class="w-full h-[70vh] object-contain rounded-lg shadow">
         <source src="${vid.file}" type="video/mp4">
       </video>
     `;
