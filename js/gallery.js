@@ -870,88 +870,131 @@
             }
 
             renderDesktopGallery() {
-                const gallery = document.getElementById('desktopGallery');
-                const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-                const endIndex = startIndex + this.itemsPerPage;
-                const pageItems = this.filteredData.slice(startIndex, endIndex);
+    const gallery = document.getElementById('desktopGallery');
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    const pageItems = this.filteredData.slice(startIndex, endIndex);
 
-                gallery.innerHTML = '';
+    gallery.innerHTML = '';
 
-                pageItems.forEach(item => {
-                    const galleryItem = document.createElement('div');
-                    galleryItem.className = 'gallery-item';
-                    galleryItem.addEventListener('click', () => this.openLightbox(item));
+    pageItems.forEach(item => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item loading'; // <-- Add loading class
+        galleryItem.addEventListener('click', () => this.openLightbox(item));
 
-                    let mediaElement = '';
-                    if (item.type === 'video') {
-                        mediaElement = `<video poster="${item.poster || 'assets/video.png'}" preload="none">
-                                         <source src="${item.src}" type="video/mp4">
-                                       </video>`;
-                    } else {
-                        mediaElement = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
-                    }
+        // Create media element
+        let mediaElement;
+        if (item.type === 'video') {
+            mediaElement = document.createElement('video');
+            mediaElement.poster = item.poster || 'assets/video.png';
+            mediaElement.preload = 'none';
 
-                    galleryItem.innerHTML = `
-                        ${mediaElement}
-                        <div class="item-overlay">
-                            <div class="item-title">${item.title}</div>
-                            <div class="item-tags">
-                                ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                            </div>
-                            <div class="item-names">${item.names.join(', ')}</div>
-                        </div>
-                    `;
+            const source = document.createElement('source');
+            source.src = item.src;
+            source.type = 'video/mp4';
+            mediaElement.appendChild(source);
 
-                    gallery.appendChild(galleryItem);
-                });
+            // Remove loading class when video is ready
+            mediaElement.addEventListener('loadeddata', () => {
+                galleryItem.classList.remove('loading');
+            });
+            mediaElement.addEventListener('error', () => {
+                galleryItem.classList.remove('loading');
+            });
+        } else {
+            mediaElement = document.createElement('img');
+            mediaElement.src = item.src;
+            mediaElement.alt = item.title;
+            mediaElement.loading = 'lazy';
 
-                this.renderPagination();
-            }
+            // Remove loading class when image is loaded
+            mediaElement.addEventListener('load', () => {
+                galleryItem.classList.remove('loading');
+            });
+            mediaElement.addEventListener('error', () => {
+                galleryItem.classList.remove('loading');
+            });
+        }
+
+        galleryItem.appendChild(mediaElement);
+
+        // Overlay info
+        const overlay = document.createElement('div');
+        overlay.className = 'item-overlay';
+        overlay.innerHTML = `
+            <div class="item-title">${item.title}</div>
+            <div class="item-tags">${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="item-names">${item.names.join(', ')}</div>
+        `;
+        galleryItem.appendChild(overlay);
+
+        gallery.appendChild(galleryItem);
+    });
+
+    this.renderPagination();
+}
 
         loadMoreMobileItems() {
-            if (!this.swipeWrapper) return;
-            // Determine how many more items to load
-            const batchSize = this.mobileBatchSize || 3;
-            const start = this.loadedMobileCount || 0;
-            const end = Math.min(start + batchSize, this.filteredData.length);
-        
-            for (let i = start; i < end; i++) {
-                const item = this.filteredData[i];
-                const mobileItem = document.createElement('div');
-                mobileItem.className = 'mobile-item';
-        
-                let mediaElement = '';
-                if (item.type === 'video') {
-                    mediaElement = `<video poster="${item.poster || 'assets/video.png'}" preload="none">
-                                        <source src="${item.src}" type="video/mp4">
-                                    </video>`;
-                } else {
-                    mediaElement = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
-                }
-        
-                mobileItem.innerHTML = `
-                    ${mediaElement}
-                    <div class="mobile-overlay">
-                        <div class="item-title">${item.title}</div>
-                        <div class="item-tags">
-                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                        </div>
-                        <div class="item-names">${item.names.join(', ')}</div>
-                    </div>
-                `;
-        
-                // Lightbox handler
-                const mediaEl = mobileItem.querySelector('img, video');
-                if (mediaEl) {
-                    mobileItem.addEventListener('click', () => this.openLightbox(item));
-                }
-        
-                this.swipeWrapper.appendChild(mobileItem);
-            }
-        
-            // Update the count of loaded items
-            this.loadedMobileCount = end;
+    if (!this.swipeWrapper) return;
+    const batchSize = this.mobileBatchSize || 3;
+    const start = this.loadedMobileCount || 0;
+    const end = Math.min(start + batchSize, this.filteredData.length);
+
+    for (let i = start; i < end; i++) {
+        const item = this.filteredData[i];
+        const mobileItem = document.createElement('div');
+        mobileItem.className = 'mobile-item loading'; // <-- Add loading class
+
+        let mediaElement;
+        if (item.type === 'video') {
+            mediaElement = document.createElement('video');
+            mediaElement.poster = item.poster || 'assets/video.png';
+            mediaElement.preload = 'none';
+
+            const source = document.createElement('source');
+            source.src = item.src;
+            source.type = 'video/mp4';
+            mediaElement.appendChild(source);
+
+            mediaElement.addEventListener('loadeddata', () => {
+                mobileItem.classList.remove('loading');
+            });
+            mediaElement.addEventListener('error', () => {
+                mobileItem.classList.remove('loading');
+            });
+        } else {
+            mediaElement = document.createElement('img');
+            mediaElement.src = item.src;
+            mediaElement.alt = item.title;
+            mediaElement.loading = 'lazy';
+
+            mediaElement.addEventListener('load', () => {
+                mobileItem.classList.remove('loading');
+            });
+            mediaElement.addEventListener('error', () => {
+                mobileItem.classList.remove('loading');
+            });
         }
+
+        mobileItem.appendChild(mediaElement);
+
+        const overlay = document.createElement('div');
+        overlay.className = 'mobile-overlay';
+        overlay.innerHTML = `
+            <div class="item-title">${item.title}</div>
+            <div class="item-tags">${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <div class="item-names">${item.names.join(', ')}</div>
+        `;
+        mobileItem.appendChild(overlay);
+
+        // Lightbox handler
+        mobileItem.addEventListener('click', () => this.openLightbox(item));
+
+        this.swipeWrapper.appendChild(mobileItem);
+    }
+
+    this.loadedMobileCount = end;
+}
 
             setupMobileGallery() {
                     this.swipeWrapper = document.getElementById('mobileSwipeWrapper');
