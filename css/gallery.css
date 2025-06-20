@@ -134,6 +134,14 @@
             0% { transform: translate(-50%, -50%) rotate(0deg);}
             100% { transform: translate(-50%, -50%) rotate(360deg);}
         }
+        .gallery-item.loading::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+            pointer-events: none;
+        }
 
         .item-overlay {
             position: absolute;
