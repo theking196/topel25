@@ -16,7 +16,7 @@
 
   
   {% for menuItem in MenuItems %}
-    {% if item.disabled != true %}
+    {% if item.disabled != true and item.disabled != 'true' %}
       <a class="menu-item {{menuItem.active}}" href="{{menuItem.link}}" > {{ menuItem.name }} </a>
     {% endif %}
   {% endfor %}
