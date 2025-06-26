@@ -15,7 +15,7 @@
   </div>
 
   
-  {% for menuItem in MenuItems %}
+  {% for menuItem in MenuItems | where: 'disabled', false %}
       <a class="menu-item {{menuItem.active}}" href="{{menuItem.link}}" > {{ menuItem.name }} </a>
   {% endfor %}
 </div>
