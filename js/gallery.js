@@ -1276,11 +1276,11 @@
 const data = {
         SiteName: "TOPEL' 25",
         MenuItems: [
-                { name: 'Home', link:"index.html",active:""},
-                { name: 'About', link:"about.html",active:""},
-                { name: 'details', link:"details.html",active:""},
-                { name: 'gallery', link:"gallery.html",active:""},
-                { name: 'Prayers For The Couple', link:"prayers.html",active:""},
+                { name: 'Home', link:"index.html",active:"", disabled:false},
+                { name: 'About', link:"about.html",active:"", disabled:false},
+                { name: 'details', link:"details.html",active:"", disabled:false},
+                { name: 'gallery', link:"gallery.html",active:"", disabled:false},
+                { name: 'Prayers For The Couple', link:"prayers.html",active:"", disabled:false},
                 { name: 'Contribuors', link:"contributors.html", disabled:true},
             ],
     };
