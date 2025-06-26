@@ -195,6 +195,7 @@ function setUpMobileInfiniteScroll() {
                 { name: 'details', link:"/details.html",active:""},
                 { name: 'gallery', link:"/gallery.html",active:""},
                 { name: 'Prayers For The Couple', link:"/prayers.html",active:""},
+                { name: 'Contribuors', link:"contributors.html", disabled:true},
             ],
     };
         
