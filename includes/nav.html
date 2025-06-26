@@ -16,9 +16,9 @@
 
   
   {% for menuItem in MenuItems %}
-    {% unless item.disabled %}
+    {% if item.disabled != true %}
       <a class="menu-item {{menuItem.active}}" href="{{menuItem.link}}" > {{ menuItem.name }} </a>
-    {% endunless %}
+    {% endif %}
   {% endfor %}
 </div>
 <div class="hamburger open">
