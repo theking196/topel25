@@ -13,8 +13,12 @@
       <span class="burger2"></span>
     </div>
   </div>
+
+  
   {% for menuItem in MenuItems %}
+    {% unless item.disabled %}
       <a class="menu-item {{menuItem.active}}" href="{{menuItem.link}}" > {{ menuItem.name }} </a>
+    {% endunless %}
   {% endfor %}
 </div>
 <div class="hamburger open">
